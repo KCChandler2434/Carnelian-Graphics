@@ -1,0 +1,473 @@
+/* ---------- CSS Variables ---------- */
+:root{
+    /* Color Theme Swatches in Hex */
+    --red: #ac3c24;
+    --maroon: #6e191e;
+    --dk-maroon: #380c0f;
+
+    --mustard: #f4ba45;
+    --yellow: #ffd677;
+
+    --mustard-shadow: #b08123;
+
+    /* Other swatches for text & accents */
+    --white: #fff;
+    --lt-gray: #eaeaea;
+    --med-gray: #555;
+    --dk-gray: #222;
+
+    --fonts:  Arial, Verdana, sans-serif;;
+}
+
+@media screen and (max-width: 485px) {
+    nav{
+        justify-content: center;
+    }
+    #gallery #img{
+        justify-content: center;
+    }
+}
+
+@media screen and (max-width: 880px) {
+    nav{
+        justify-content: center;
+    }
+    #gallery #img{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media screen and (max-width: 1300px) {
+    nav{
+        margin-left: 60%;
+    }
+}
+
+body{
+    background-color: var(--dk-maroon);
+
+    line-height: 1.5;
+	font-family: var(--fonts);
+    max-width: 1440px;
+    margin: 0 auto;
+    border: none; 
+}
+
+h1{
+    font-size: 4rem;
+}
+
+h2{
+    color: var(--red);
+    font-size: 4rem;
+}
+
+h3{
+    font-size: 3rem;
+}
+
+p{
+    font-size: 2rem;
+}
+
+/*header styles*/
+header{
+    display: grid;
+    grid-template-columns: 48% 52%;
+    background-color: var(--red);
+    border-radius: 0rem 0rem 5rem 0rem;
+    height: 400px;
+    align-items: center;
+    box-shadow: 0px 8px 15px var(--dk-maroon);
+
+    /*! make header sticky*/
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+
+header img{
+    height: 400px;
+    width: auto;
+}
+
+
+header h1{
+    text-align: center;
+    background: var(--yellow);
+    padding-bottom: 1rem;
+    padding-top: 1rem;
+    margin: 3rem;
+    border-radius: 25px;
+    color: var(--dk-maroon);
+}
+
+/*Nav*/
+nav ul{
+    list-style-type: none;
+	padding: 0 1rem 0 0;
+	display: grid;
+	grid-template-columns: .01fr .01fr .01fr;
+    justify-content: right;
+    margin-left: 85rem;
+    margin-top: -.5rem;
+    gap: 10px;
+
+    z-index: 2;
+}
+
+nav a{
+    text-decoration: none;
+    color: var(--yellow);
+    font-size: 3rem;
+    padding-top: -1rem;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    padding-bottom: 1rem;
+
+    background-image: linear-gradient(var(--dk-maroon), var(--maroon), var(--maroon), var(--maroon));
+    
+    border-radius: 0px 0px 25px 20px;
+}
+
+nav a:hover{
+    background-image: linear-gradient(var(--red), var(--red));
+    line-height: 5.5rem;
+    padding-top: 1rem;
+}
+
+/*making tabs stick out on their pages*/
+nav #abo{
+    background-image: linear-gradient(var(--red), var(--red));
+    line-height: 5.5rem;
+    padding-top: 1rem;
+}
+
+nav #gal{
+    background-image: linear-gradient(var(--red), var(--red));
+    line-height: 5.5rem;
+    padding-top: 1rem;
+}
+
+nav #pri{
+    background-image: linear-gradient(var(--red), var(--red));
+    line-height: 5.5rem;
+    padding-top: 1rem;
+}
+
+/*about section*/
+#about{
+    box-shadow: inset 0 0 0 500vw rgba(244, 186, 69, 0.75);
+    background-image: url("images/paper texture.png");
+    background-size: cover;
+    background-color: var(--mustard);
+    border-radius: 0rem 5rem 0rem 0rem;
+
+    padding-top: 5rem;
+}
+
+#about #CG{
+    padding:1rem;
+    margin-bottom: 4rem;
+}
+
+#toptape, #toptape2{
+    position: absolute;
+    max-width: 200px;
+    transform: rotate(120deg);
+    margin-top: -3rem;
+}
+
+#toptape2{
+    transform: rotate(-10deg);
+    margin-left: 76rem;
+    margin-top: -18.5rem;
+}
+
+#leftsun, #rightsun{
+    max-width: 100px;
+    height: auto;
+
+    margin-bottom: -7rem;
+    margin-left: 20rem;
+}
+
+#rightsun{
+    margin-left: 38rem;
+}
+
+#CG h2{
+    position: absolute;
+    margin-top: .05rem;
+    margin-left: 27rem;
+
+    text-decoration: underline;
+}
+
+#CG p{
+    box-shadow: inset 0 0 0 100vw rgba(255, 214, 119, 0.75);
+    background-image: url("images/paper texture.png");
+    background-size: cover;
+    border-right: 5px ridge var(--mustard-shadow);
+    border-bottom: 5px ridge var(--mustard-shadow);
+
+    text-align: center;
+    padding: 3rem;
+    padding-top: 6.25rem;
+    border-radius: 1rem;
+    font-size: 2rem;
+
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/*about me section*/
+#aboutMe{
+    display: flex;
+    box-shadow: inset 0 0 0 500vw rgba(244, 186, 69, 0.75);
+    background-image: url("images/paper texture.png");
+    background-size: cover;
+    background-color: var(--mustard);
+
+    padding-bottom: 4rem;
+}
+
+#tapePolaroid{
+    position: absolute;
+    max-width: 200px;
+    height: auto;
+    transform: rotate(135deg);
+    margin-left: 13rem;
+    margin-top: -2.5rem;
+}
+
+#me{
+    border-bottom: 6rem solid var(--white);
+    border-left: 2rem solid var(--white);
+    border-right: 2rem solid var(--white);
+    border-top: 2rem solid var(--white);
+
+    transform: rotate(-4deg);
+    margin-top: 3.25rem;
+    margin-left: 4rem;
+    margin-right: 4rem;
+    max-width:500px;
+    height: auto;
+
+    box-shadow:  6px 6px 5px var(--mustard-shadow);
+}
+
+#tape{
+    position: absolute;
+    border: none;
+    margin-left: 34.5rem;
+    margin-top: -11rem;
+    max-width: 200px;
+    height: auto;
+}
+
+#tape2{
+    position: absolute;
+    border: none;
+    margin-left: -3rem;
+    margin-top: 20rem;
+    max-width: 200px;
+    height: auto;
+}
+
+#aboutMe h2{
+    text-decoration: underline;
+    margin-left: 6rem;
+    margin-bottom: 1.5rem;
+}
+
+#aboutMe p{
+    box-shadow: inset 0 0 0 100vw rgba(255, 214, 119, 0.75);
+    background-image: url("images/paper texture.png");
+    background-size: cover;
+
+    border-right: 5px ridge var(--mustard-shadow);
+    border-bottom: 5px ridge var(--mustard-shadow);
+
+    text-align: center;
+    padding: 3.25rem;
+    padding-top: 5.5rem;
+    border-radius: 1rem;
+    margin-top: -7rem;
+    margin-right: 4rem;
+    font-size: 2rem;
+}
+
+/*gallery*/
+
+#gallery{
+    box-shadow: inset 0 0 0 500vw rgba(244, 186, 69, 0.75);
+    background-image: url("images/paper texture.png");
+    background-size: cover;
+    padding-top: 5rem;
+    margin-bottom: 1rem;
+
+    border-radius: 0rem 5rem 0rem 0rem
+}
+
+#gallery section{
+    margin: 2rem;
+}
+
+#gallery h2{
+    text-decoration: underline;
+    margin: 2rem;
+    background-color: var(--yellow);
+    border-radius: 3rem;
+    text-align: center;
+}
+
+#gallery h1{
+    color: var(--dk-maroon);
+    font-size: 3rem; 
+    background-color: var(--white);
+
+    margin: 2rem;
+    padding-top: 0rem;
+    padding-bottom: 0rem;
+    padding-right: 1rem;
+    padding-left: 1rem;
+
+    border-radius: 3rem;
+}
+
+#gallery img{
+    max-height: auto;
+    max-width: 425px;
+    margin: .5rem;
+    justify-content: center;
+
+    border: 10px solid var(--white);
+    border-radius: 1.25rem;
+}
+
+#GD{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-content: center;
+    
+    background-color: var(--white);
+    border-radius: 3rem;
+    margin: 1rem;
+    padding: 1rem;
+}
+
+#Photo{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-content: center;
+
+    background-color: var(--white);
+    border-radius: 3rem;
+    margin: 1rem;
+    padding: 1rem;
+}
+
+#Illustration{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+
+    background-color: var(--white);
+    border-radius: 3rem;
+    margin: 1rem;
+    padding: 1rem;
+}
+
+#WD{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+
+    background-color: var(--white);
+    border-radius: 3rem;
+    margin: 1rem 1rem 1rem 1rem;
+    padding: 1rem;
+}
+
+#WD a{
+    text-decoration: none;
+    color: var(--yellow);
+    background-color: var(--red);
+    font-size: 3rem;
+    text-align: center;
+    border-radius: 25px;
+    font-weight: bold;
+
+    width: 350px;
+    margin: 1rem;
+    padding: 2rem;
+}
+
+/*pricing*/
+#pricing{
+    box-shadow: inset 0 0 0 500vw rgba(244, 186, 69, 0.75);
+    background-image: url("images/paper texture.png");
+    background-size: cover;
+    background-color: var(--mustard);
+    display: grid;
+    margin-top: 5rem;
+    margin-bottom: 1rem;
+    justify-content: start;
+    border-radius: 0rem 5rem 0rem 0rem;
+}
+
+#pricing h1{
+    margin: 1rem;
+    margin-bottom: 0;
+}
+
+#pricing h2{
+    margin-top: 1rem;
+    margin-left: 3rem;
+    margin-bottom: 2rem;
+    margin-right: 62rem;
+    color: var(--dk-maroon);
+    font-size: 3rem; 
+    background-color: var(--white);
+
+    padding-top: 0rem;
+    padding-bottom: 0rem;
+    padding-right: 0rem;
+    padding-left: 1rem;
+
+    border-radius: 3rem;
+    
+}
+
+#pricing img{
+    margin-top: 0rem;
+    margin-left: 8rem;
+    margin-right: 1rem;
+    gap: 1rem;
+    display: inline-grid;
+    height: 250px;
+    max-width: auto;
+}
+
+/*footer*/
+
+footer{
+    background-color: var(--red);
+    border-radius: 0rem 0rem 5rem 5rem;
+    padding: 1rem;
+    text-align: center;
+}
+
+footer h3{
+    color: var(--white);
+    margin: 0;
+    padding: 0;
+    font-weight: 1;
+}
+
+footer img{
+    max-width: auto;
+    height: 5rem;
+}
+
+
